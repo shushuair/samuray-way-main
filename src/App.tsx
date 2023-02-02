@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Rating from './components/Rating';
+import Redd from './components/Redd';
+
 
 function App() {
+  console.log("App rendering");
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      article 1
+    <Rating value={3}/>
+     <PageTitle title="animals"/>
+     <PageTitle title="girls"/>
+     article 2
+     <Rating value={4}/>
+     <Redd titleValue={"Menu"}/>
+     <Redd titleValue={"Users"}/>
+    </div>   
   );
+}
+
+function PageTitle(props:any) { 
+  debugger
+  console.log("PageTitle rendering");
+  return <h1> {props.title} </h1>;
 }
 
 export default App;
